@@ -26,7 +26,7 @@ let getDataPath = new Promise(resolve => {
     })
 })
 
-const percent2percent25 = (URI) => {
+const tryDecodeURI = (URI) => {
     try {
         let str = decodeURI(URI)
         return str
@@ -43,7 +43,7 @@ function getFirefoxData(firefoxDataPath, querySql) {
             resultList.push({
                 title: item.title,
                 // description: item.description || item.url, // 如果 description 为 null ，就用 url
-                description: percent2percent25(item.url),
+                description: tryDecodeURI(item.url),
                 icon: "./icon.png",
                 url: item.url,
                 lowcaseTitle: item.title.toLowerCase(),
