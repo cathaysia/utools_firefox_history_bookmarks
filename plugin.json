@@ -1,18 +1,37 @@
 {
-    "pluginName": "Firefox 历史记录",
-    "description": "搜索 Firefox 历史记录，可以按网页标题和 url 进行过滤",
+    "version": "1.0.0",
+    "pluginName": "Firefox 历史书签",
+    "description": "搜索 Firefox 历史记录和书签，可以按网页标题和 url 进行过滤",
+    "author": "cathaysia",
+    "homepage": "https://github.com/cathaysia/utools_firefox_history_bookmarks",
     "preload": "preload.js",
-    "version": "0.0.1",
     "logo": "icon.png",
-    "author":"cathaysia",
-    "homepage":"https://github.com/cathaysia/utools_firefox_history",
     "features": [
         {
             "code": "ff_history",
             "explain": "搜索 Firefox 历史记录",
             "cmds": [
                 "Firefox History",
-                "FH"
+                "FH",
+                "火狐历史"
+            ]
+        },
+        {
+            "code": "ff_bookmarks",
+            "explain": "搜索 Firefox 书签",
+            "cmds": [
+                "Firefox BookMarks",
+                "FB",
+                "火狐书签"
+            ]
+        },
+        {
+            "code": "ff_all",
+            "explain": "搜索 Firefox 书签和历史",
+            "cmds": [
+                "Firefox BookMarks And BookMarks",
+                "FF",
+                "火狐书签和历史"
             ]
         }
     ]

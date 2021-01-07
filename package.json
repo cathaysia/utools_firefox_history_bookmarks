@@ -1,15 +1,12 @@
 {
-  "name": "fire",
+  "name": "utools_firefox_history_bookmarks",
   "version": "1.0.0",
-  "description": "",
+  "description": "搜索 Firefox 历史记录和书签，可以按网页标题和 url 进行过滤",
   "main": "preload.js",
   "dependencies": {
     "sqlite3": "^5.0.0"
   },
-  "devDependencies": {},
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "",
-  "license": "ISC"
+  "author": "cathaysia",
+  "license": "MIT",
+  "homepage": "https://github.com/cathaysia/utools_firefox_history_bookmarks"
 }
