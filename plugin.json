@@ -1,0 +1,19 @@
+{
+    "pluginName": "Firefox 历史记录",
+    "description": "搜索 Firefox 历史记录，可以按网页标题和 url 进行过滤",
+    "preload": "preload.js",
+    "version": "0.0.1",
+    "logo": "icon.png",
+    "author":"cathaysia",
+    "homepage":"https://github.com/cathaysia/utools_firefox_history",
+    "features": [
+        {
+            "code": "ff_history",
+            "explain": "搜索 Firefox 历史记录",
+            "cmds": [
+                "Firefox History",
+                "FH"
+            ]
+        }
+    ]
+}
