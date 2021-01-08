@@ -47,6 +47,7 @@ function getFirefoxData(firefoxDataPath, querySql) {
                 icon: "./icon.png",
                 url: item.url,
                 lowcaseTitle: item.title.toLowerCase(),
+                lowcaseUrl: item.url.toLowerCase()
             })
         })
     })
@@ -55,9 +56,18 @@ function getFirefoxData(firefoxDataPath, querySql) {
 
 let searchAction = (action, searchWord, callbackSetList) => {
     searchWord = searchWord.trim()
-    return callbackSetList(resultList.filter(item => item.lowcaseTitle.includes(searchWord) | item.url.includes(searchWord)))
+    let keywords = searchWord.split(' ')
+
+    return callbackSetList(resultList.filter(item => {
+        let result = false
+        keywords.forEach(key => {
+            result = item.lowcaseTitle.includes(key) | item.lowcaseUrl.includes(key)
+        })
+        return result
+    }))
     // 在进行过滤时，使用 title 和 url 进行过滤
 }
+
 let selectAction = (action, itemData, callbackSetList) => {
     window.utools.hideMainWindow()
     const url = itemData.url
