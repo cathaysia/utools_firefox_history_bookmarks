@@ -59,9 +59,9 @@ let searchAction = (action, searchWord, callbackSetList) => {
     let keywords = searchWord.split(' ')
 
     return callbackSetList(resultList.filter(item => {
-        let result = false
+        let result = true
         keywords.forEach(key => {
-            result = item.lowcaseTitle.includes(key) | item.lowcaseUrl.includes(key)
+            result = result & (item.lowcaseTitle.includes(key) | item.lowcaseUrl.includes(key))
         })
         return result
     }))
