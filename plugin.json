@@ -1,5 +1,5 @@
 {
-    "version": "1.0.0",
+    "version": "1.0.1",
     "pluginName": "Firefox 历史书签",
     "description": "搜索 Firefox 历史记录和书签，可以按网页标题和 url 进行过滤",
     "author": "cathaysia",
