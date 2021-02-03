@@ -40,6 +40,8 @@ function getFirefoxData(firefoxDataPath, querySql) {
     db_sqlite3.all(querySql, (err, rows) => {
         if (err) throw err
         rows.forEach(item => {
+            // 防止 item.title 导致插件无法被加载
+            if(item.title===null) return;
             resultList.push({
                 title: item.title,
                 // description: item.description || item.url, // 如果 description 为 null ，就用 url
